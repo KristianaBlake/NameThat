@@ -4,6 +4,7 @@ namespace NameThat.Models
 {
     public class Result
     {
+        public int ID { get; set; }
         public string Type { get; set; }
 
         public byte[] Picture { get; set; }
