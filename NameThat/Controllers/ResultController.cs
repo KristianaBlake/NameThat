@@ -80,7 +80,7 @@ namespace NameThat.Controllers
             _context.Result.Add(result);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetResult", new { id = result.ID }, result);
+            return CreatedAtAction(nameof(GetResult), new { id = result.ID }, result);
         }
 
         // DELETE: api/Result/5
