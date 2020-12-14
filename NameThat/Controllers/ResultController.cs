@@ -22,24 +22,16 @@ namespace NameThat.Controllers
 
         // GET: api/Result
         [HttpGet]
+
         public async Task<ActionResult<IEnumerable<Result>>> GetResult()
         {
             return await _context.Result.ToListAsync();
         }
 
-        // GET: api/Result/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Result>> GetResult(int id)
-        {
-            var result = await _context.Result.FindAsync(id);
-
-            if (result == null)
-            {
-                return NotFound();
-            }
-
-            return result;
-        }
+        // GET: api/Result/title
+        [HttpGet("{title}")]
+        public async {}
+        
 
         // PUT: api/Result/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
