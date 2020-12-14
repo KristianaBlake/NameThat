@@ -30,8 +30,40 @@ namespace NameThat.Controllers
 
         // GET: api/Result/title
         [HttpGet("{title}")]
-        public async {}
-        
+        public async Task<ActionResult<Title>> GetResult(title)
+        {
+            var userInput = title.ToString();
+
+            if (userInput == null || userInput.Length == 0)
+            {
+                return NotFound();
+            } else {
+                string searchUrl = $"http://www.omdbapi.com/?t=" + userInput + "&apikey=942af2e";
+
+                try{
+                    
+                    using (WebClient wc = new WebClient())
+                    {
+                        try{
+                            string json = wc.DownloadString(searchUrl);
+                            JavaScriptSerializer oJS = new JavaScriptSerializer();
+                            Program obj - new Program();
+                            obj = oJS. Deserialize<OmdbAPI>(json);
+                            if (obj.Response == "True")
+                            {
+                                OmdbAPI.Title == obj.Title;
+                                OmdbAPI.Type == obj.Type;
+                                OmdbAPI.Picture == obj.Picture;
+                                OmdbAPI.YearOfRelease == obj.YearOfRelease
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            return result;
+        }
 
         // PUT: api/Result/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
