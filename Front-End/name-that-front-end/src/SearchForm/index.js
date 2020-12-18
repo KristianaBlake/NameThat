@@ -8,7 +8,6 @@ class SearchForm extends Component {
       title: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmgit = this.handleSubmit.bind(this);
     
   }
 
@@ -17,10 +16,6 @@ class SearchForm extends Component {
     this.setState({title: e.target.value});
   };
 
-  handleSubmit = e => {
-    alert('A title was submitted: ' + this.state.value);
-    e.preventDefault();
-  }
 
   render() {
     return (
@@ -29,7 +24,7 @@ class SearchForm extends Component {
             <label>
                 Title:
             </label>
-            <input type="text" value={this.state.title} onChange={this.handleChangle} /> 
+            <input type="text" value={this.state.title} onChange={this.handleChange} /> 
         </form>
         <button onClick={this.handleChange}>
           Search
