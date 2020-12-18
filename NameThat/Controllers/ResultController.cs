@@ -47,7 +47,7 @@ namespace NameThat.Controllers
                         try{
                             string json = wc.DownloadString(searchUrl);
                             JavaScriptSerializer oJS = new JavaScriptSerializer();
-                            Program obj - new Program();
+                            Result obj - new Result();
                             obj = oJS. Deserialize<OmdbAPI>(json);
                             if (obj.Response == "True")
                             {

@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-
-import Form from "./Form";
+import SearchForm from "./SearchForm";
+import React from "react";
 
 function App() {
   return (
     <div>
-      <Form/> 
+      <SearchForm/> 
     </div>
   );
 }
