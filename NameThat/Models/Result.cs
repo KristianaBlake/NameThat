@@ -10,7 +10,7 @@ namespace NameThat.Models
 
         public string Type { get; set; }
 
-        public string Picture { get; set; }
+        public string Poster { get; set; }
 
         public int YearOfRelease { get; set; }
 
